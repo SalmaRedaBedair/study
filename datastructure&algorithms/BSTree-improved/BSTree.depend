@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1667578341 source:e:\desktop\bstree\main.cpp
+	<bits/stdc++.h>
+	<BSTee.h>
+	<Node.h>
+
+1667578274 source:e:\desktop\bstree\src\node.cpp
+	"Node.h"
+
+1667578263 e:\desktop\bstree\include\node.h
+
+1667578324 e:\desktop\bstree\include\bstee.h
+	<Node.h>
+	<bits/stdc++.h>
+
+1667578482 source:e:\desktop\bstree\src\bstree.cpp
+	"BSTree.h"
+
+1667578450 e:\desktop\bstree\include\bstree.h
+	<Node.h>
+	<bits/stdc++.h>
+

@@ -1,0 +1,119 @@
+===introduction===
+-database:collection of related data
+-database properties:
+       -represent some aspect of real world ,it called mini world 
+           any change in miniworld is reflected in database
+       -logically coherent
+       -built for specific purpose 
+-database system: refers to data and DBMS 
+                     Examples of database systems: oracle my sql server ,my sql
+-database can be any size and complexity 
+-data base may be generated and maintained manually or computerized
+  library card catalog =>manually
+  computrized=>by group of application programs writtten for that task 
+             or by data base mangement system 
+===Database management system(DBMS) ===
+collction of programs enable users to create and maintain data base
+-DBMS facilitates: defining, constructing, manipulating, sharing,protecting.
+-defining: specifing data types 
+-meta-data: database definition or descriptive
+-constructing: sorting data base in some storage meduim
+-manipulating: update database to reflect changes in miniworld
+-sharing: database alow multible useres to access database simultaneously.
+-protection: againest hardware and software malfunction
+-app program: access data by sending query to DBMS
+              querey: cause some data to be retraived
+              transaction: casue some data to be read or written
+-it is not necessary to use genral purpos DBMS to implement computrized DB,
+ we can make our own program
+ in either case we usually have to deploy a considerable amount of complex software
+ DBMS is a complex software systems
+-DB & DBMS are called database system
+-records in verios files of database may be related 
+-quiries and updates must be specified in langouage of DBMS before processing
+
+=====design new app for existing database====
+-design new app for existing database need requirements specification and analysis
+   requirements=>conceptual design=>logical design=>physical design
+-conceptual design:can be represented and manipulated using some computerized
+tools
+-logical design: can be expressed in data model implemented in commerical DBMS
+-physical design: provided for sorting and accessing data 
+
+=====file processing & data base=====
+-file processing: each user define files need specific software as part of programming the app
+ each file maintained seperatly
+ this redundancy result in wastage storage 
+-database: single reposity maintain data
+ define once access by many user 
+ each app free to name data independantly => any update update all data but in file i need to update each indepentantlly
+
+======characteristics of database systems===
+1-Self-Describing Nature of a Database System: database systems contain not only data but also charachteristic of these data
+2-Insulation between Programs and Data,and Data Abstraction :
+  The structure of data files is stored in the DBMS catalog separately
+  from the access programs
+3-support multible of views: every user use database for diffrent purpose
+4-Sharing of Data and Multiuser Transaction Processing:
+  DBMS must include concurrency
+  control software to ensure that several users trying to update the same data do 
+  so in a controlled manner so that the result of the updates is correct.
+-transaction: is an excuting or process include one or more database access
+-DBMS must enforce several transiction properities :
+ 1-isolation: each transiction appears to perform in isolation form
+ 2-automicity: ensure that either or database operations in transiction are excuted or none
+====Actors on scence===
+1-database administrator(DBA): resposible for 
+  -access database
+  -coordinate and monitoring its use
+  -acuring software and hardware as needed
+  -security branches and poor system response
+2-database designer: responsible for
+  -identifing data to be able to store 
+  -choose appropriate structure to store and represent data
+  -interact with all useres to develop view of database that meet their requirements
+3-end users
+  i-casual end useres: need diffrent information each time
+  ii-naive or parametric end users: constatly querying and update database 
+  iii-Sophisticated end users: include engineers, scientists, business analysts, and
+      others who thoroughly familiarize themselves with the facilities of the
+      DBMS in order to implement their own applications to meet their complex
+      requirements.
+  iv-standalone user: maintain personal database by using ready-made program package  
+4-software engineer: should be familiar with the full range of capabilities provided 
+  by the DBMS to accomplish their tasks
+  determine requrements for end user
+  develope specification for standard canned transactions
+
+====workers behind scence====
+work with DBNS
+1-database managment design and implemnter: design DBMS
+2-tool developer: design and implemnt tool(software package)
+3-Operators and maintenance personnel: mantainance hardware and software for DBMS
+
+==========Advantages of Using the DBMS Approach=========
+A-redundancy in sorting same data multiple times lead to several problems:
+ 1-update will be done multible times 
+ 2-storage space is wasted
+ 3-data inconsistent
+-we should have database design that store the same logical data item in only one place in database
+-denormalization: store related data in one place so i will not search multiple times
+B-Restricting Unauthorized Access:
+  1-most users will not have access to see all data in database
+  2-some users will be primited to retraive data
+  3-DBMS must have security and authorization subsystem which DBA use to create accounts and
+    add restrictions 
+c-Providing Storage Structures and Search Techniques for Efficient Query Processing
+ 1-DBMS need specialized data structure and search techniques to speed up disk search
+ 2-auxiliary files called indexes  usd for that purpose
+ 3-in order to make paricular query, records must be copied from disk to main memory
+ 4-DBMS hryas buffering or caching module maintain parts of database in main memory
+ 5-The query processing and optimization module of the DBMS is responsible for
+  choosing an efficient query execution plan for each query based on the existing storage
+  structures. The choice of which indexes to create and maintain is part of physical
+  database design and tuning, which is one of the responsibilities of the DBA staff
+==Providing Multiple User Interfaces: 
+ -query language => casual usere
+ -programing language interface => application programmers
+ -forms and commands codes => parametric users
+ -menu-driven and natural language interfaces=> standalone users

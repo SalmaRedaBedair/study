@@ -1,0 +1,44 @@
+====Rod cutting====
+-we can cut rod of length n in 2^(n-1)ways, every time i choose to cut or not.
+-there is a lot of sub problems which will be called more than one time so we need to store value of each subproblem so we can return its value and not to recompute it .
+-running time    before dp =>exponential     after dp=>polynomial
+-there is to equivelent ways to implement dp
+     -top-down
+              -first check if i compute the subproblem if yes return value if not compute its value 
+     -bottom-up   
+              -solve smallest first
+              -when i want to solve any problem its subproblems were calculated before so it return its value 
+     -they have the same asymptotic running time but bottom up much better constant factors, since it has less overhead for procedure calls.
+=====matrix multipliction=======
+-to multiply Ai......j
+ we split product between Ak,Ak+1
+ then multiply(A1.....k)*(Ak+1...j)
+ time = time to multiply(a1...k)+time to multiply(Ak+1...j)+time to multiply((a1...k)*(Ak+1...j))
+-s represent value of k (where i solit product)
+======Elements of dynamic programming======
+-optimal substructure varies between across problem domain in two ways:
+ 1- how many subproblems 
+ 2-how many choices we have in determining which subproblem to use in an optimal solution
+-time of dp algorithm = no. of subproblems + how many choices we look st for each subproblem
+-The cost of the problem solution is usually the subproblem costs plus
+      a cost that is directly attributable to the choice itself.  
+-diffrence between greedy alorithm and dp is
+ greedy: make choise that looks best and then solve resulting subproblem 
+ dp: find optimal solution for subproblem then make optimal choice
+overlapping subproblems: whaen our program revisit the same problem repeatedly
+===========Longest common subsequence=====
+-subsequence might be not contigous but it must match in increasing sequence 
+ ex:BCDB & ABCBDAB it match with correspondin index sequence (2, 3, 5, 7)
+-if Xm==Yn then find LCS of Xm-1 and Yn-1
+ if Xm!=Yn then solve twp subproblems Xm-1 and Y & X and Yn-1
+-print LCS take O(m+n) because in each recursice call i target at least one i or j
+-if problem ask for length only  
+ i can reduce space of c to be 2n only as it only dapend on brevious row and previous column
+ *notice that it can not be done if i want to print LCS, i will be need more information
+=====Optimal binary search trees====
+-for n elements there are 2nCn/(n+1) or((4^n)/(n^(3/2))) possible trees
+-more palanced binary search tree depend on frequency of each element not on height of tree
+-optimal binary search tree take time O(n^3)
+-it is the same as matrix chain multiplucation
+
+

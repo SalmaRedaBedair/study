@@ -1,0 +1,36 @@
+1.1)data: some ammount of information which we need to record and store, i will need to use 
+          it later
+    database: collection of related data
+    DBMS: collection of programs allow users to maintain databases
+    database system: refers to data and DBMS 
+                     Examples of database systems: oracle my sql server ,my sql
+    database catalog: descripe data
+    program-data independence: any update in high level schema will not affect low evel
+                               levels are: 1-external level
+                                           2-concpetual level(logical level)
+                                           3-pghysical level
+    user view: many users use databse for diffrent purposes 
+    DBA: who is managing DBMS,he have all facilties,he is resposible for security,
+         hardware and software for DB, he make account and choose specifications for each user
+    end user: require access for querying,updating and generating reports
+    canned transiction: standard types of quering and updating to constantly quering and updating database
+    deductive database systems: provide capabilities for definig deduction rules for 
+                                inferecying new information from database facts
+   metadata: description for data
+ 1.3)database any changes will change all program 
+     file processing change in one file need change in the others
+==Self-Describing Nature of a Database System
+traditional file description is part of program 
+     these programs are used for specifc purpopose whosse structure is declares in the application program
+DBMS description in catalog any programs that use the same DBNS should work equally
+==Insulation between Programs and Data,and Data Abstraction
+traditional any change in one file need change all programs that access this file
+DBMS use abstraction so any data that is used many times write once 
+==multiple of views 
+DBMS every user can access only data he want its useful in big data
+traditional file he will access all data 
+share data 
+DBMS have concurrency contol so any update in data affect all files 
+traditionl files are not
+1.4)DBA i have talked above
+Design: design how data will look like and how to store and he talk with all users to make it support difrent point of views
